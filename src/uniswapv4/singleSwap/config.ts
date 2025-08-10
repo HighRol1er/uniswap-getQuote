@@ -11,7 +11,8 @@ export const CurrentConfig: SwapExactInSingle = {
     hooks: "0x0000000000000000000000000000000000000000",
   },
   zeroForOne: true,
-  amountIn: ethers.parseUnits("1", ETH_TOKEN.decimals).toString(),
-  amountOutMinimum: "0",
+  amountIn: ethers.utils.parseUnits("0.0001", ETH_TOKEN.decimals).toString(), // 0.01 ETH로 테스트
+  // amountOutMinimum: "minAmountOut", // Change according to the slippage desired
+  amountOutMinimum: "0", // Change according to the slippage desired
   hookData: "0x00",
 };

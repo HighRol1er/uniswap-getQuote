@@ -15,6 +15,8 @@ export async function getQuote() {
     params
   );
 
-  console.log(ethers.formatUnits(quotedAmountOut[0], USDC_TOKEN.decimals)); // [amountOut, gasEstimate]
+  console.log(
+    ethers.utils.formatUnits(quotedAmountOut[0], USDC_TOKEN.decimals)
+  ); // [amountOut, gasEstimate]
   return quotedAmountOut[0];
 }
